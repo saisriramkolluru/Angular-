@@ -1,8 +1,14 @@
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
+import { NgModule } from '@angular/core';
 
 export const routes: Routes = [
     {
-        path:' ' ,component : HeaderComponent
+        path:'home' ,component : HeaderComponent
     }
 ];
+@NgModule({
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
+  })
+  export class AppRoutingModule { }
